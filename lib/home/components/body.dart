@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                margin: const EdgeInsets.only(right: 15, top: 5),
+                margin: const EdgeInsets.only(right: 15, top: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
@@ -45,16 +45,20 @@ class Body extends StatelessWidget {
                       ],
                     ),
                     IconButton(
-                      padding: EdgeInsets.zero,
-                      constraints: const BoxConstraints(),
-                      onPressed: (){
-                         Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const SearchScreen()),
-                        );
-                      }, icon: const Icon(Icons.search, size: 30,))
-                    
+                        padding: EdgeInsets.zero,
+                        constraints: const BoxConstraints(),
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const SearchScreen()),
+                          );
+                        },
+                        icon: const Icon(
+                          Icons.search,
+                          size: 30,
+                        ))
+
                     // ...List.generate(
                     //     1,
                     //     (index) => const Icon(
@@ -69,7 +73,9 @@ class Body extends StatelessWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(top: 30),
                   child: Row(
-                    children: [...List.generate(3, (index) => const CardMovie())],
+                    children: [
+                      ...List.generate(3, (index) => const CardMovie())
+                    ],
                   ),
                 ),
               ),
@@ -89,9 +95,7 @@ class Body extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 20),
                 child: Column(
-                  children: [
-                   ...List.generate(5, (index) => MovieList())
-                  ],
+                  children: [...List.generate(5, (index) => MovieList())],
                 ),
               )
             ],
@@ -100,5 +104,4 @@ class Body extends StatelessWidget {
       ),
     );
   }
-
 }
