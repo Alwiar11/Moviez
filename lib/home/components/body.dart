@@ -17,7 +17,7 @@ class Body extends StatelessWidget {
           child: Column(
             children: [
               Container(
-                margin: const EdgeInsets.only(right: 15, top: 10),
+                margin: const EdgeInsets.only(right: 15, top: 5),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
